@@ -1,0 +1,9 @@
+class User < ActiveRecord::Base
+  validates :content, :length => {
+    :minimum   => 2,
+    :maximum   => 4,
+    :too_short => "must have at least %{count} words",
+    :too_long  => "must have at most %{count} words"
+  }
+	
+end
